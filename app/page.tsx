@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WordOfTheDay from './components/WordOfTheDay';
+import LearnHindi from './components/LearnHindi';
 import ConceptExplorer from './components/ConceptExplorer';
 import Features from './components/Features';
 import CourseLevels from './components/CourseLevels';
@@ -10,12 +11,15 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 flex flex-col relative selection:bg-cyan-500 selection:text-slate-950">
+    <main className="min-h-screen bg-ivory text-walnut-deep flex flex-col relative">
       {/* Top Navbar */}
       <Navbar />
 
       {/* Hero Section */}
       <Hero />
+
+      {/* English → Hindi tense & grammar notes with the tense game */}
+      <LearnHindi />
 
       {/* Interactive Word of the Day Feature */}
       <WordOfTheDay />

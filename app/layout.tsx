@@ -1,25 +1,30 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
+});
+
+const devanagari = Noto_Sans_Devanagari({
+  variable: "--font-devanagari",
+  subsets: ["devanagari"],
 });
 
 export const viewport: Viewport = {
-  themeColor: "#1e1b4b",
+  themeColor: "#6B1E2B",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "English Offline — 10,000+ Grammar & Vocabulary Offline App",
+  title: "English Offline — Learn English in Hindi, Fully Offline",
   description:
     "Master English grammar, daily spoken phrases & 1,000+ high-frequency vocabulary words completely offline. 100% local privacy guarantee, zero ads, zero data tracking. Built for fast, intuitive learning.",
   keywords: [
@@ -29,6 +34,9 @@ export const metadata: Metadata = {
     "offline vocabulary builder",
     "spoken english offline",
     "english hindi grammar",
+    "learn english in hindi",
+    "english tenses in hindi",
+    "past present future tense hindi",
     "siddharth gauri english offline",
     "english offline apk",
     "offline english app download"
@@ -64,7 +72,7 @@ export const metadata: Metadata = {
     siteName: "English Offline",
     images: [
       {
-        url: "/logo.jpeg",
+        url: "/logo.png",
         width: 512,
         height: 512,
         alt: "English Offline App Logo",
@@ -78,7 +86,7 @@ export const metadata: Metadata = {
     title: "English Offline App",
     description:
       "Master English offline with 10,000+ concepts, daily practice, and 100% local data privacy.",
-    images: ["/logo.jpeg"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -114,7 +122,7 @@ const jsonLd = {
     "ratingValue": "4.9",
     "ratingCount": "1250"
   },
-  "image": "https://english-offline.vercel.app/logo.jpeg"
+  "image": "https://english-offline.vercel.app/logo.png"
 };
 
 export default function RootLayout({
@@ -125,7 +133,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}
+      className={`${fraunces.variable} ${jakarta.variable} ${devanagari.variable} scroll-smooth`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
@@ -136,7 +144,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className="min-h-screen bg-slate-950 text-slate-100 antialiased font-sans flex flex-col selection:bg-cyan-500 selection:text-slate-950"
+        className="min-h-screen bg-ivory text-walnut-deep antialiased font-sans flex flex-col"
         suppressHydrationWarning
       >
         {children}

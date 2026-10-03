@@ -260,8 +260,8 @@ export const courseLevels: CourseLevel[] = [
     modulesCount: 4,
     exercisesPerModule: '10+ Exercises Each',
     topics: ['Definite & Indefinite Articles', 'Present & Past Tenses', 'Common Prepositions (in, on, at)', 'Daily Survival Vocabulary'],
-    gradient: 'from-emerald-500/20 to-teal-500/10',
-    borderColor: 'border-emerald-500/30',
+    gradient: 'from-bronze to-bronze-soft',
+    borderColor: 'border-line',
   },
   {
     id: 'intermediate',
@@ -272,8 +272,8 @@ export const courseLevels: CourseLevel[] = [
     modulesCount: 4,
     exercisesPerModule: '10+ Exercises Each',
     topics: ['Present & Past Perfect', 'Modal Auxiliary Verbs', 'First & Second Conditionals', 'Spoken English Idioms'],
-    gradient: 'from-cyan-500/20 to-blue-500/10',
-    borderColor: 'border-cyan-500/30',
+    gradient: 'from-burgundy to-bronze',
+    borderColor: 'border-line',
   },
   {
     id: 'advanced',
@@ -284,8 +284,8 @@ export const courseLevels: CourseLevel[] = [
     modulesCount: 4,
     exercisesPerModule: '10+ Exercises Each',
     topics: ['Active to Passive Voice', 'Subjunctive & Hypotheticals', 'Advanced Phrasal Verbs', 'Common Error Eradication'],
-    gradient: 'from-indigo-500/20 to-purple-500/10',
-    borderColor: 'border-indigo-500/30',
+    gradient: 'from-walnut to-burgundy',
+    borderColor: 'border-line',
   },
 ];
 

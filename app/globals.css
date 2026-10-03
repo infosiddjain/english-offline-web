@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/*
+ * Brand palette (shared with the mobile app):
+ * Burgundy #6B1E2B · Bronze #B67A4A · Ivory #F8F4EC · Walnut #5A4035 · Stone #B8AAA0
+ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-burgundy: #6b1e2b;
+  --color-burgundy-dark: #4e1520;
+  --color-burgundy-soft: #f3e4e2;
+  --color-bronze: #b67a4a;
+  --color-bronze-dark: #8f5b33;
+  --color-bronze-soft: #f3e3d3;
+  --color-ivory: #f8f4ec;
+  --color-ivory-deep: #f1e9de;
+  --color-paper: #fffdf8;
+  --color-walnut: #5a4035;
+  --color-walnut-deep: #2b1d18;
+  --color-stone: #b8aaa0;
+  --color-line: #e6dcd0;
+  --color-success: #3f7d58;
+  --color-success-soft: #e7f1e9;
+  --color-danger: #b3402f;
+  --color-danger-soft: #f8e5e0;
+
+  --font-sans: var(--font-jakarta), var(--font-devanagari), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-hindi: var(--font-devanagari), var(--font-jakarta), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-ivory);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ivory);
+  color: var(--color-walnut-deep);
+}
+
+::selection {
+  background: var(--color-burgundy);
+  color: var(--color-ivory);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none;
+  }
 }

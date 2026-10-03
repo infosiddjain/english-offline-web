@@ -1,7 +1,7 @@
 {
   "name": "English Offline",
   "short_name": "English Offline",
-  "description": "Learn English offline with 10,000+ concepts, grammar rules, daily spoken phrases & vocabulary.",
+  "description": "Learn English in Hindi — tenses, grammar notes, games and vocabulary, fully offline.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -14,7 +14,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#1e1b4b",
-  "background_color": "#0f172a",
+  "theme_color": "#6B1E2B",
+  "background_color": "#F8F4EC",
   "display": "standalone"
 }
