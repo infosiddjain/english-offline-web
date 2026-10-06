@@ -6,8 +6,8 @@ import ContactForm from './ContactForm';
 import { appStats } from '../data/appData';
 
 export const metadata: Metadata = {
-  title: 'Contact — English Offline',
-  description: 'Send feedback, report a bug or ask a question about English Offline.',
+  title: 'Contact',
+  description: 'Contact the English Offline team — send feedback, report a bug or a content mistake, or ask a question about learning English in Hindi offline.',
   alternates: { canonical: '/contact' },
 };
 

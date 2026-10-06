@@ -18,7 +18,7 @@ import {
 import { appStats } from '../data/appData';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | English Offline',
+  title: 'Privacy Policy',
   description:
     'Official 100% local data privacy policy for English Offline. Learn how your data remains 100% private, on-device, and secure with zero tracking or ads.',
   alternates: {

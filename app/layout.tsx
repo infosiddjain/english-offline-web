@@ -23,28 +23,35 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const SITE_URL = "https://english-offline.vercel.app";
+const DEVELOPER_URL = "https://portfolio-five-brown-mafnjkhjpf.vercel.app/";
+const PLAY_STORE_URL = "https://play.google.com/store/apps/developer?id=Siddharth+Gauri";
+
 export const metadata: Metadata = {
-  title: "English Offline — Learn English in Hindi, Fully Offline",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Learn English in Hindi Offline — Tenses, Grammar & Vocabulary | English Offline",
+    template: "%s | English Offline",
+  },
   description:
-    "Master English grammar, daily spoken phrases & 1,000+ high-frequency vocabulary words completely offline. 100% local privacy guarantee, zero ads, zero data tracking. Built for fast, intuitive learning.",
+    "Learn English in Hindi without internet. All 12 tenses with Hindi notes and formulas, grammar basics, a tense game and 1,000+ vocabulary words. Free, no ads, no tracking.",
+  applicationName: "English Offline",
   keywords: [
-    "english offline app",
-    "learn english offline",
-    "english grammar app india",
-    "offline vocabulary builder",
-    "spoken english offline",
-    "english hindi grammar",
     "learn english in hindi",
+    "learn english offline",
     "english tenses in hindi",
-    "past present future tense hindi",
-    "siddharth gauri english offline",
-    "english offline apk",
-    "offline english app download"
+    "12 tenses in hindi with examples",
+    "english grammar in hindi",
+    "spoken english in hindi",
+    "english vocabulary with hindi meaning",
+    "english learning app without internet",
+    "offline english app",
+    "english offline app download",
   ],
-  authors: [{ name: "Siddharth Gauri", url: "https://portfolio-five-brown-mafnjkhjpf.vercel.app/" }],
+  authors: [{ name: "Siddharth Gauri", url: DEVELOPER_URL }],
   creator: "Siddharth Gauri",
   publisher: "Siddharth Gauri",
-  metadataBase: new URL("https://english-offline.vercel.app"),
+  category: "education",
   alternates: {
     canonical: "/",
   },
@@ -57,25 +64,20 @@ export const metadata: Metadata = {
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
-    other: [
-      {
-        rel: "manifest",
-        url: "/site.webmanifest",
-      },
-    ],
   },
+  manifest: "/site.webmanifest",
   openGraph: {
-    title: "English Offline — 10,000+ Grammar & Vocab Offline App",
+    title: "Learn English in Hindi — Fully Offline | English Offline",
     description:
-      "Learn English offline anytime, anywhere. 10,000+ grammar rules, daily spoken phrases, 1,000+ vocabulary words. 100% local privacy & zero ads.",
-    url: "https://english-offline.vercel.app",
+      "12 tenses with Hindi notes, grammar basics, a tense game and 1,000+ words with Hindi meanings. Works without internet. No ads, no tracking.",
+    url: SITE_URL,
     siteName: "English Offline",
     images: [
       {
-        url: "/logo.png",
-        width: 512,
-        height: 512,
-        alt: "English Offline App Logo",
+        url: "/og-image.png",
+        width: 1024,
+        height: 500,
+        alt: "English Offline — learn English in Hindi, fully offline",
       },
     ],
     locale: "en_IN",
@@ -83,10 +85,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "English Offline App",
+    title: "Learn English in Hindi — Fully Offline",
     description:
-      "Master English offline with 10,000+ concepts, daily practice, and 100% local data privacy.",
-    images: ["/logo.png"],
+      "12 tenses with Hindi notes, grammar basics, a tense game and 1,000+ words. No internet, no ads, no tracking.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -100,29 +102,47 @@ export const metadata: Metadata = {
   },
 };
 
+const developer = {
+  "@type": "Person",
+  "@id": `${SITE_URL}/#developer`,
+  "name": "Siddharth Gauri",
+  "url": DEVELOPER_URL,
+  "sameAs": [DEVELOPER_URL, PLAY_STORE_URL],
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "English Offline",
-  "operatingSystem": "Android, iOS",
-  "applicationCategory": "EducationalApplication",
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "INR"
-  },
-  "description": "Offline-first English learning application with 10,000+ grammar concepts, daily spoken phrases, and high-frequency vocabulary words with 100% local data privacy.",
-  "author": {
-    "@type": "Person",
-    "name": "Siddharth Gauri",
-    "url": "https://portfolio-five-brown-mafnjkhjpf.vercel.app/"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "1250"
-  },
-  "image": "https://english-offline.vercel.app/logo.png"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
+      "name": "English Offline",
+      "inLanguage": "en-IN",
+      "publisher": { "@id": `${SITE_URL}/#developer` },
+    },
+    developer,
+    {
+      "@type": "MobileApplication",
+      "@id": `${SITE_URL}/#app`,
+      "name": "English Offline",
+      "url": SITE_URL,
+      "operatingSystem": "Android",
+      "applicationCategory": "EducationalApplication",
+      "inLanguage": ["en", "hi"],
+      "description":
+        "Learn English in Hindi, fully offline: all 12 tenses with Hindi notes and formulas, grammar basics, a tense game and 1,000+ vocabulary words with Hindi meanings. No ads, no tracking.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+      },
+      "author": { "@id": `${SITE_URL}/#developer` },
+      "image": `${SITE_URL}/logo.png`,
+      "screenshot": `${SITE_URL}/og-image.png`,
+      "downloadUrl": PLAY_STORE_URL,
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -132,7 +152,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="en-IN"
       className={`${fraunces.variable} ${jakarta.variable} ${devanagari.variable} scroll-smooth`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
