@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ShieldCheck, Download, Sparkles, Layers, Search, User, GraduationCap, Mail } from 'lucide-react';
+import { Menu, X, ShieldCheck, Download, Layers, GraduationCap, Mail, Languages, MessageCircle, Feather } from 'lucide-react';
 import { appStats } from '../data/appData';
 import Logo from './Logo';
 
@@ -24,12 +24,12 @@ export default function Navbar({ onOpenPrivacy }: NavbarProps) {
   }, []);
 
   const navLinks = [
-    { name: 'Overview', href: '/#overview', icon: Sparkles },
     { name: 'Learn in Hindi', href: '/#learn', icon: GraduationCap },
+    { name: 'Dictionary', href: '/dictionary', icon: Languages },
+    { name: 'Conversations', href: '/conversations', icon: MessageCircle },
+    { name: 'Poems', href: '/poems', icon: Feather },
     { name: 'Features', href: '/#features', icon: ShieldCheck },
-    { name: 'Concepts', href: '/#concepts', icon: Search },
     { name: 'Levels', href: '/#levels', icon: Layers },
-    { name: 'Developer', href: '/#developer', icon: User },
     { name: 'Contact', href: '/contact', icon: Mail },
   ];
 

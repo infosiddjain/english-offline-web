@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WordOfTheDay from './components/WordOfTheDay';
+import ExploreMore from './components/ExploreMore';
 import LearnHindi from './components/LearnHindi';
 import ConceptExplorer from './components/ConceptExplorer';
 import Features from './components/Features';
@@ -17,6 +18,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <Hero />
+
+      {/* Dictionary, conversations and poems */}
+      <ExploreMore />
 
       {/* English → Hindi tense & grammar notes with the tense game */}
       <LearnHindi />

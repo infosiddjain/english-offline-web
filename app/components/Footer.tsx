@@ -46,6 +46,15 @@ export default function Footer({ onOpenPrivacy }: FooterProps) {
                 <Link href="/#overview" className="hover:text-burgundy transition-colors">App Overview</Link>
               </li>
               <li>
+                <Link href="/dictionary" className="hover:text-burgundy transition-colors">English ↔ Hindi Dictionary</Link>
+              </li>
+              <li>
+                <Link href="/conversations" className="hover:text-burgundy transition-colors">English Conversations in Hindi</Link>
+              </li>
+              <li>
+                <Link href="/poems" className="hover:text-burgundy transition-colors">English &amp; Hindi Poems</Link>
+              </li>
+              <li>
                 <Link href="/#features" className="hover:text-burgundy transition-colors">Offline Features</Link>
               </li>
               <li>
