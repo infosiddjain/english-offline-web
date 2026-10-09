@@ -15,7 +15,7 @@ export default function Features({ onOpenPrivacy }: FeaturesProps) {
       color: 'text-bronze',
       bg: 'bg-bronze-soft border-bronze/30',
       title: '100% Offline Engine',
-      description: 'Zero Wi-Fi or mobile data needed. Access all 10,250+ grammar rules, vocabulary words, and exercises anywhere—even in remote areas or flight mode.',
+      description: 'Zero Wi-Fi or mobile data needed. Access every grammar rule, vocabulary word and exercise anywhere—even in remote areas or flight mode.',
     },
     {
       icon: ShieldCheck,
@@ -42,7 +42,7 @@ export default function Features({ onOpenPrivacy }: FeaturesProps) {
       icon: Sparkles,
       color: 'text-bronze',
       bg: 'bg-bronze-soft border-bronze/30',
-      title: '10,000+ Concept Library',
+      title: '300+ Concept Library',
       description: 'Comprehensive repository of Definite/Indefinite Articles, Perfect Tenses, Prepositions, Modal Verbs, Idioms, and Common Error fixes.',
     },
     {

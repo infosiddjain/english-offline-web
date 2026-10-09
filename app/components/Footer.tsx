@@ -58,7 +58,7 @@ export default function Footer({ onOpenPrivacy }: FooterProps) {
                 <Link href="/#features" className="hover:text-burgundy transition-colors">Offline Features</Link>
               </li>
               <li>
-                <Link href="/#concepts" className="hover:text-burgundy transition-colors">10,000+ Concept Explorer</Link>
+                <Link href="/#concepts" className="hover:text-burgundy transition-colors">Concept Explorer</Link>
               </li>
               <li>
                 <Link href="/#levels" className="hover:text-burgundy transition-colors">Course Levels</Link>

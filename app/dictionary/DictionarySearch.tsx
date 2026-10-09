@@ -40,6 +40,7 @@ function WordCard({ w, onSearch }: { w: DictionaryWord; onSearch: (q: string) =>
         <span className="text-[11px] font-bold bg-bronze-soft text-bronze-dark border border-bronze/30 px-2 py-0.5 rounded-full uppercase tracking-wider">
           {w.type}
         </span>
+        <span className="text-[11px] font-semibold text-walnut/70">{w.level}</span>
       </div>
 
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
@@ -54,7 +55,10 @@ function WordCard({ w, onSearch }: { w: DictionaryWord; onSearch: (q: string) =>
         <SpeakButton text={w.hindi.split('/')[0].trim()} lang="hi" />
       </div>
 
-      <p className="text-sm text-walnut-deep leading-relaxed">{w.meaning}</p>
+      <div className="space-y-0.5">
+        <p className="text-sm text-walnut-deep leading-relaxed">{w.meaning}</p>
+        <p className="font-hindi text-sm text-bronze-dark leading-relaxed">{w.meaningHi}</p>
+      </div>
 
       <div className="rounded-xl bg-ivory border border-line p-3 space-y-1">
         <div className="flex items-start gap-2">

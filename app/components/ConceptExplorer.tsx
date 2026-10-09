@@ -53,7 +53,7 @@ export default function ConceptExplorer() {
             <span>Interactive Concept Engine Preview</span>
           </div>
           <h2 className="text-[1.75rem] leading-tight sm:text-4xl font-serif font-semibold text-walnut-deep tracking-tight">
-            Explore 10,000+ Offline Concepts & Rules
+            Explore 300+ Offline Concepts & Rules
           </h2>
           <p className="text-walnut text-sm sm:text-base leading-relaxed">
             Try the live interactive offline search below. In the mobile app, every single concept, rule, idiom, and daily spoken phrase is instantly searchable without an active internet connection.

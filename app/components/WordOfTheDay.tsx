@@ -108,7 +108,7 @@ export default function WordOfTheDay() {
                   Daily Vocabulary Practice
                 </div>
                 <p className="text-[11px] text-walnut/80 leading-tight">
-                  English Offline includes 1,000+ words like this, stored 100% locally on your phone.
+                  English Offline includes 150+ words like this, each with Hindi examples, stored 100% locally on your phone.
                 </p>
                 <button
                   onClick={handleCopyExample}

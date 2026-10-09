@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | English Offline",
   },
   description:
-    "Learn English in Hindi without internet. All 12 tenses with Hindi notes and formulas, grammar basics, a tense game and 1,000+ vocabulary words. Free, no ads, no tracking.",
+    "Learn English in Hindi without internet. All 12 tenses with Hindi notes and formulas, grammar basics, a tense game and 150+ vocabulary words with Hindi examples. Free, no ads, no tracking.",
   applicationName: "English Offline",
   keywords: [
     "learn english in hindi",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Learn English in Hindi — Fully Offline | English Offline",
     description:
-      "12 tenses with Hindi notes, grammar basics, a tense game and 1,000+ words with Hindi meanings. Works without internet. No ads, no tracking.",
+      "12 tenses with Hindi notes, grammar basics, a tense game and 150+ words with Hindi meanings and examples. Works without internet. No ads, no tracking.",
     url: SITE_URL,
     siteName: "English Offline",
     images: [
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Learn English in Hindi — Fully Offline",
     description:
-      "12 tenses with Hindi notes, grammar basics, a tense game and 1,000+ words. No internet, no ads, no tracking.",
+      "12 tenses with Hindi notes, grammar basics, a tense game and 150+ words. No internet, no ads, no tracking.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -131,7 +131,7 @@ const jsonLd = {
       "applicationCategory": "EducationalApplication",
       "inLanguage": ["en", "hi"],
       "description":
-        "Learn English in Hindi, fully offline: all 12 tenses with Hindi notes and formulas, grammar basics, a tense game and 1,000+ vocabulary words with Hindi meanings. No ads, no tracking.",
+        "Learn English in Hindi, fully offline: all 12 tenses with Hindi notes and formulas, grammar basics, a tense game and 150+ vocabulary words with Hindi meanings. No ads, no tracking.",
       "offers": {
         "@type": "Offer",
         "price": "0",

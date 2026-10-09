@@ -1,3 +1,5 @@
+import { dictionaryWords } from './dictionary';
+
 export interface VocabWord {
   id: string;
   word: string;
@@ -66,8 +68,10 @@ export interface ConceptItem {
 }
 
 export const appStats = {
-  totalOfflineConcepts: 10250,
-  vocabularyCount: 1000,
+  // Concept library size in the app (english-offline-app/src/data/dataEngine.js), rounded down.
+  totalOfflineConcepts: 300,
+  // Words in app/data/dictionary.ts, rounded down to a tens figure for "150+" style copy.
+  vocabularyCount: Math.floor(dictionaryWords.length / 10) * 10,
   handcraftedExercises: 50,
   dailyStreaksActive: "100% Offline",
   userRating: "4.9 / 5.0",
